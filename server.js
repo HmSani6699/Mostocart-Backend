@@ -28,19 +28,41 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
+}));
 app.use(express.json({ limit: "15mb" }));
 app.use(express.urlencoded({ extended: true, limit: "15mb" }));
 app.use(morgan("dev"));
 
-// Static File Serving
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.use("/images", express.static(path.join(__dirname, "..", "frontend", "public", "images")));
+// Ensure DB connection is active before processing any API requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (err) {
+    console.error("DB connection error in middleware:", err.message);
+  }
+  next();
+});
 
-// Serve built frontend assets if dist exists
-const frontendDist = path.join(__dirname, "..", "frontend", "dist");
-if (fs.existsSync(frontendDist)) {
-  app.use(express.static(frontendDist));
+// Static File Serving
+try {
+  const uploadsDir = path.join(__dirname, "uploads");
+  if (fs.existsSync(uploadsDir)) {
+    app.use("/uploads", express.static(uploadsDir));
+  }
+  const frontendImages = path.join(__dirname, "..", "Frontend", "public", "images");
+  if (fs.existsSync(frontendImages)) {
+    app.use("/images", express.static(frontendImages));
+  }
+  const frontendDist = path.join(__dirname, "..", "Frontend", "dist");
+  if (fs.existsSync(frontendDist)) {
+    app.use(express.static(frontendDist));
+  }
+} catch {
+  // Ignore in serverless environment
 }
 
 // Mount API routes
@@ -75,6 +97,7 @@ app.use((err, req, res, next) => {
 
 // SPA wildcard fallback
 app.get("*", (req, res) => {
+  const frontendDist = path.join(__dirname, "..", "Frontend", "dist");
   const indexPath = path.join(frontendDist, "index.html");
   if (fs.existsSync(indexPath)) {
     res.sendFile(indexPath);
@@ -83,7 +106,7 @@ app.get("*", (req, res) => {
   }
 });
 
-// Start Server
+// Start Server (only when run locally, not in Vercel serverless environment)
 async function startServer() {
   await connectDB();
   await runSeed();
@@ -105,4 +128,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;

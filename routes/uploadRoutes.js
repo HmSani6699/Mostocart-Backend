@@ -13,9 +13,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const UPLOAD_DIR = path.join(__dirname, "..", "uploads");
 
-// Ensure fallback upload dir exists
-if (!fs.existsSync(UPLOAD_DIR)) {
-  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+// Ensure fallback upload dir exists safely (handle read-only serverless environment)
+try {
+  if (!fs.existsSync(UPLOAD_DIR)) {
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+  }
+} catch (e) {
+  // Read-only serverless filesystem on Vercel
 }
 
 // Memory storage for direct streaming to Cloudinary
@@ -39,14 +43,28 @@ const router = express.Router();
 function saveLocalFallback(file) {
   const ext = path.extname(file.originalname) || ".png";
   const uniqueName = `img_${Date.now()}_${Math.round(Math.random() * 1e9)}${ext}`;
-  const filePath = path.join(UPLOAD_DIR, uniqueName);
-  fs.writeFileSync(filePath, file.buffer);
-  return {
-    url: `/uploads/${uniqueName}`,
-    filename: uniqueName,
-    public_id: uniqueName,
-    provider: "local"
-  };
+
+  try {
+    const targetDir = fs.existsSync(UPLOAD_DIR) ? UPLOAD_DIR : "/tmp";
+    const filePath = path.join(targetDir, uniqueName);
+    fs.writeFileSync(filePath, file.buffer);
+    return {
+      url: `/uploads/${uniqueName}`,
+      filename: uniqueName,
+      public_id: uniqueName,
+      provider: "local"
+    };
+  } catch (err) {
+    // If disk write fails in read-only environment, return base64 data URI
+    const mime = file.mimetype || "image/png";
+    const b64 = file.buffer.toString("base64");
+    return {
+      url: `data:${mime};base64,${b64}`,
+      filename: file.originalname,
+      public_id: `b64_${Date.now()}`,
+      provider: "base64_fallback"
+    };
+  }
 }
 
 /**
