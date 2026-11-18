@@ -153,6 +153,7 @@ async function verifyEndToEndWorkflow() {
   console.log(`✓ COD Outstanding Amount: ৳${codOutstanding.toLocaleString("en-BD")}`);
 
   console.log("\n=== ALL END-TO-END WORKFLOWS VERIFIED SUCCESSFULLY ===");
+  process.exit(0);
 }
 
 verifyEndToEndWorkflow().catch((err) => {

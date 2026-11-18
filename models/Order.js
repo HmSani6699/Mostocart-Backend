@@ -142,6 +142,21 @@ export const Order = {
     return db.orders[idx];
   },
 
+  async findByIdAndDelete(id) {
+    if (isMongoDBActive()) {
+      if (mongoose.isValidObjectId(id)) {
+        return await MongooseOrder.findByIdAndDelete(id).lean();
+      }
+      return await MongooseOrder.findOneAndDelete({ orderId: id }).lean();
+    }
+    const db = getFallbackDb();
+    const idx = db.orders.findIndex((o) => o._id === id || o.id === id || o.orderId === id);
+    if (idx === -1) return null;
+    const removed = db.orders.splice(idx, 1)[0];
+    saveFallbackDb();
+    return removed;
+  },
+
   async countDocuments(query = {}) {
     if (isMongoDBActive()) {
       return await MongooseOrder.countDocuments(query);
@@ -152,4 +167,6 @@ export const Order = {
     return res.length;
   }
 };
+
+export { MongooseOrder };
 

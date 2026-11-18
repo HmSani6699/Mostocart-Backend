@@ -6,7 +6,9 @@ import { Review } from "./models/Review.js";
 import { Setting } from "./models/Setting.js";
 
 export async function runSeed() {
-  await connectDB();
+  if (!isMongoDBActive()) {
+    await connectDB();
+  }
   console.log("Seeding initial store data...");
 
   // 1. Initial Product Configuration
@@ -124,7 +126,7 @@ export async function runSeed() {
         title: "হিরো সেকশন",
         content: {
           badge: "প্রাকৃতিক স্কিন কেয়ার রুটিন",
-          headline: "ছোট Lump নিয়ে চিন্তা না করে, শুরু করুন সঠিক Care Routine",
+          headline: "ছোট Lipoma  নিয়ে চিন্তা না করে, শুরু করুন সঠিক Care Routine",
           subheadline: "অপারেশনের ঝামেলা ছাড়া বাসায় বসেই ত্বকের অস্বস্তিদায়ক ফ্যাট লাম্প ও নডিউলের নিয়মিত যত্নে শতভাগ প্রাকৃতিক উপাদানে প্রস্তুত Lipoma Removal Spray।",
           ctaButtonText: "🛒 এখনই অর্ডার করুন",
           regularPrice: 2970,
@@ -156,7 +158,7 @@ export async function runSeed() {
         content: {
           title: "Lipoma Removal Spray কীভাবে কাজ করে ও ব্যবহারের নিয়ম দেখুন",
           subtitle: "সহজ ব্যবহার পদ্ধতি ও কার্যকারিতার বাস্তব ভিডিও ডেমো",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          videoUrl: "https://www.youtube.com/watch?v=4yNVXXcr2s0",
           thumbnailUrl: "/images/lipoma-combo-3.png"
         }
       },
@@ -187,22 +189,13 @@ export async function runSeed() {
               title: "অপারেশনের ঝামেলা ছাড়াই সহজ সমাধান",
               description: "কোনো জটিলতা ছাড়াই ঘরে বসেই নিজে নিজে সহজে ব্যবহার করতে পারেন।"
             },
-            {
-              title: "Lipoma ও Fat Lump টার্গেট করে কাজ করে",
-              description: "নিয়মিত ব্যবহারে লাম্পের উপরিভাগের টানটান অনুভূতি ও অস্বস্তি ধীরে ধীরে কমাতে সহায়তা করে।"
-            },
+
             {
               title: "100% Herbal & Skin Friendly Formula",
               description: "প্রাকৃতিক উপাদানে তৈরি যা ত্বকের জন্য Gentle Care প্রদান করে এবং কোনো জ্বালাপোড়া করে না।"
             },
-            {
-              title: "দ্রুত শোষিত হয় (Fast Absorption)",
-              description: "কোনো প্রকার Sticky বা আঠালো ভাব ছাড়াই কয়েক মুহূর্তেই স্কিনে সম্পূর্ণ Absorb হয়ে যায়।"
-            },
-            {
-              title: "দৈনন্দিন ব্যবহারে নিরাপদ",
-              description: "প্রতিদিন নিয়মিত ব্যবহারের জন্য প্রস্তুতকৃত একটি Safe & Effective ভেষজ কেয়ার ফর্মুলা।"
-            },
+
+
             {
               title: "শরীরের বিভিন্ন স্থানে ব্যবহারযোগ্য",
               description: "ঘাড়, পিঠ, পেট, হাত কিংবা পায়ের যেকোনো ফ্যাট লাম্পের জায়গায় নির্বিঘ্নে ব্যবহার করা যায়।"
@@ -211,14 +204,8 @@ export async function runSeed() {
               title: "ব্যবহার করা অত্যন্ত সহজ",
               description: "শুধু প্রয়োজন মতো Spray করুন এবং আলতো করে কিছুক্ষণ Massage করুন।"
             },
-            {
-              title: "অস্বস্তিদায়ক ফিলিং থেকে স্বস্তি দেয়",
-              description: "Unwanted Lump এর কারণে সৃষ্ট ভারি ভাব ও অস্বস্তি কমাতে সহায়তা করে।"
-            },
-            {
-              title: "No Harsh Chemicals",
-              description: "কোনো ক্ষতিকর কেমিক্যাল বা প্যারাবেন ছাড়া শতভাগ Natural Care Solution!"
-            },
+
+
             {
               title: "Home Delivery + Cash On Delivery",
               description: "পণ্য হাতে পেয়ে মূল্য পরিশোধের সুবিধাসহ সারা বাংলাদেশে দ্রুত হোম ডেলিভারি।"
@@ -322,9 +309,9 @@ export async function runSeed() {
         isVisible: true,
         title: "ফুটার",
         content: {
-          hotline: "01905-761214",
-          email: "contact@nobonir.com",
-          address: "Dhaka, Bangladesh",
+          hotline: "01938-569959",
+          email: "mostocart@gmail.com",
+          address: "House-31, Road-2, 6th Floor, Block-C, Banasree, Rampura, Dhaka, 1219",
           copyrightText: "© ২০২৬ Nobonir Online Shopping. All rights reserved.",
           returnPolicyText: "পণ্য হাতে পেয়ে চেক করে নেওয়ার সুবিধা এবং ত্রুটিপূর্ণ পণ্যে সহজ রিটার্ন পলিসি।"
         }
@@ -532,19 +519,33 @@ export async function runSeed() {
   const initialSettings = {
     storeName: "Nobonir Online Shop",
     tagline: "Trusted Health & Wellness Products in Bangladesh",
-    hotline: "01905-761214",
-    whatsappNumber: "01905761214",
-    email: "contact@nobonir.com",
-    address: "House 24, Road 5, Dhanmondi, Dhaka 1205",
+    hotline: "01938-569959",
+    whatsappNumber: "01938-569959",
+    email: "mostocart@gmail.com",
+    address: "House-31, Road-2, 6th Floor, Block-C, Banasree, Rampura, Dhaka, 1219",
     deliveryInsideDhaka: 70,
     deliveryOutsideDhaka: 120,
     defaultCourier: "Steadfast"
   };
 
-  // Execute Seed
-  await Product.findOneAndUpdate({ slug: "lipoma-removal-spray" }, initialProduct, { upsert: true });
-  await LandingPage.findOneAndUpdate({ slug: "lipoma-removal-spray" }, initialLandingPage, { upsert: true });
-  await Setting.updateSettings(initialSettings);
+  // Execute Seed (Safe Seeding: preserves existing records to keep backend fully dynamic)
+  const existingProduct = await Product.findOne({ slug: "lipoma-removal-spray" });
+  if (!existingProduct) {
+    await Product.create(initialProduct);
+    console.log("Seeded initial product.");
+  }
+
+  const existingLanding = await LandingPage.findOne({ slug: "lipoma-removal-spray" });
+  if (!existingLanding) {
+    await LandingPage.create(initialLandingPage);
+    console.log("Seeded initial landing page.");
+  }
+
+  const currentSettings = await Setting.getSettings();
+  if (!currentSettings || !currentSettings.storeName) {
+    await Setting.updateSettings(initialSettings);
+    console.log("Seeded initial settings.");
+  }
 
   for (const rev of initialReviews) {
     const existing = await Review.find({ customerName: rev.customerName });

@@ -80,6 +80,36 @@ export const Review = {
       return { deletedCount: 1 };
     }
     return { deletedCount: 0 };
+  },
+
+  async findById(id) {
+    if (isMongoDBActive()) {
+      return await MongooseReview.findById(id).lean();
+    }
+    const db = getFallbackDb();
+    return db.reviews.find((r) => r._id === id || r.id === id) || null;
+  },
+
+  async findByIdAndDelete(id) {
+    if (isMongoDBActive()) {
+      return await MongooseReview.findByIdAndDelete(id).lean();
+    }
+    const db = getFallbackDb();
+    const idx = db.reviews.findIndex((r) => r._id === id || r.id === id);
+    if (idx === -1) return null;
+    const removed = db.reviews.splice(idx, 1)[0];
+    saveFallbackDb();
+    return removed;
+  },
+
+  async countDocuments(query = {}) {
+    if (isMongoDBActive()) {
+      return await MongooseReview.countDocuments(query);
+    }
+    const db = getFallbackDb();
+    return db.reviews.length;
   }
 };
+
+export { MongooseReview };
 

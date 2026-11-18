@@ -35,10 +35,9 @@ export const Setting = {
       db.settings = {
         storeName: "Nobonir Online Shop",
         tagline: "Trusted Health & Wellness Products in Bangladesh",
-        hotline: "01905-761214",
-        whatsappNumber: "01905761214",
-        email: "contact@nobonir.com",
-        address: "House 24, Road 5, Dhanmondi, Dhaka 1205",
+        "hotline": "01938-569959",
+        "email": "mostocart@gmail.com",
+        "address": "House-31, Road-2, 6th Floor, Block-C, Banasree, Rampura, Dhaka, 1219",
         deliveryInsideDhaka: 70,
         deliveryOutsideDhaka: 120,
         defaultCourier: "Steadfast"
@@ -59,4 +58,6 @@ export const Setting = {
     return db.settings;
   }
 };
+
+export { MongooseSetting };
 

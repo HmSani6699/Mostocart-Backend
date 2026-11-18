@@ -112,7 +112,16 @@ export const LandingPage = {
 
   async findOneAndUpdate(query, update, options = { new: true, upsert: false }) {
     if (isMongoDBActive()) {
-      return await MongooseLandingPage.findOneAndUpdate(query, update, options).lean();
+      const updated = await MongooseLandingPage.findOneAndUpdate(query, update, options).lean();
+      try {
+        const db = getFallbackDb();
+        const idx = db.landingPages.findIndex((lp) => (query._id && lp._id === query._id) || (query.slug && lp.slug === query.slug));
+        if (idx !== -1) {
+          db.landingPages[idx] = { ...db.landingPages[idx], ...update, updatedAt: new Date().toISOString() };
+          saveFallbackDb();
+        }
+      } catch (e) {}
+      return updated;
     }
     const db = getFallbackDb();
     const idx = db.landingPages.findIndex((lp) => {
@@ -133,6 +142,45 @@ export const LandingPage = {
       return await this.create({ ...query, ...update });
     }
     return null;
+  },
+
+  async deleteOne(query) {
+    if (isMongoDBActive()) {
+      return await MongooseLandingPage.deleteOne(query);
+    }
+    const db = getFallbackDb();
+    const idx = db.landingPages.findIndex((lp) => (query._id && lp._id === query._id) || (query.slug && lp.slug === query.slug));
+    if (idx !== -1) {
+      db.landingPages.splice(idx, 1);
+      saveFallbackDb();
+      return { deletedCount: 1 };
+    }
+    return { deletedCount: 0 };
+  },
+
+  async findByIdAndDelete(id) {
+    if (isMongoDBActive()) {
+      if (mongoose.isValidObjectId(id)) {
+        return await MongooseLandingPage.findByIdAndDelete(id).lean();
+      }
+      return await MongooseLandingPage.findOneAndDelete({ slug: id }).lean();
+    }
+    const db = getFallbackDb();
+    const idx = db.landingPages.findIndex((lp) => lp._id === id || lp.id === id || lp.slug === id);
+    if (idx === -1) return null;
+    const removed = db.landingPages.splice(idx, 1)[0];
+    saveFallbackDb();
+    return removed;
+  },
+
+  async countDocuments(query = {}) {
+    if (isMongoDBActive()) {
+      return await MongooseLandingPage.countDocuments(query);
+    }
+    const db = getFallbackDb();
+    return db.landingPages.length;
   }
 };
+
+export { MongooseLandingPage };
 

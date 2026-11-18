@@ -154,6 +154,31 @@ export const Product = {
       return { deletedCount: 1 };
     }
     return { deletedCount: 0 };
+  },
+
+  async findByIdAndDelete(id) {
+    if (isMongoDBActive()) {
+      if (mongoose.isValidObjectId(id)) {
+        return await MongooseProduct.findByIdAndDelete(id).lean();
+      }
+      return await MongooseProduct.findOneAndDelete({ slug: id }).lean();
+    }
+    const db = getFallbackDb();
+    const idx = db.products.findIndex((p) => p._id === id || p.id === id || p.slug === id);
+    if (idx === -1) return null;
+    const removed = db.products.splice(idx, 1)[0];
+    saveFallbackDb();
+    return removed;
+  },
+
+  async countDocuments(query = {}) {
+    if (isMongoDBActive()) {
+      return await MongooseProduct.countDocuments(query);
+    }
+    const db = getFallbackDb();
+    return db.products.length;
   }
 };
+
+export { MongooseProduct };
 

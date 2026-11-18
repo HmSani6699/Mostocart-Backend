@@ -10,7 +10,7 @@
       "discountPercentage": 39,
       "currency": "BDT",
       "sku": "LIP-COMBO-03",
-      "stock": 150,
+      "stock": 149,
       "isActive": true,
       "mainImage": "/images/lipoma-combo-3.png",
       "galleryImages": [
@@ -29,7 +29,7 @@
           "price": 689,
           "discountPercent": 30,
           "sku": "LIP-01",
-          "stock": 50,
+          "stock": 49,
           "badge": "৩০% ছাড়",
           "image": "/images/lipoma-1-bottle.png",
           "isFeatured": false
@@ -95,7 +95,7 @@
       "medicalDisclaimer": "জরুরি চিকিৎসা বিজ্ঞপ্তি: এই স্প্রেটি ত্বক ও লাম্পের উপরিভাগের অস্বস্তি কমাতে সহায়ক একটি কেয়ার প্রোডাক্ট। এটি কোনো প্রেসক্রিপশন সার্জিক্যাল ট্রিটমেন্টের বিকল্প নয়। শরীরের যেকোনো অস্বাভাবিক পিণ্ড বা ফোলাভাব বিশেষজ্ঞ চিকিৎসকের মাধ্যমে পরীক্ষা করানো নিরাপদ।",
       "_id": "prod_1794238481569_wq04m",
       "createdAt": "2026-11-09T15:34:41.570Z",
-      "updatedAt": "2026-11-09T20:11:30.296Z"
+      "updatedAt": "2026-11-18T16:39:11.861Z"
     }
   ],
   "landingPages": [
@@ -132,7 +132,7 @@
           "title": "হিরো সেকশন",
           "content": {
             "badge": "প্রাকৃতিক স্কিন কেয়ার রুটিন",
-            "headline": "ছোট Lump নিয়ে চিন্তা না করে, শুরু করুন সঠিক Care Routine",
+            "headline": "ছোট Lipoma  নিয়ে চিন্তা না করে, শুরু করুন সঠিক Care Routine",
             "subheadline": "অপারেশনের ঝামেলা ছাড়া বাসায় বসেই ত্বকের অস্বস্তিদায়ক ফ্যাট লাম্প ও নডিউলের নিয়মিত যত্নে শতভাগ প্রাকৃতিক উপাদানে প্রস্তুত Lipoma Removal Spray।",
             "ctaButtonText": "🛒 এখনই অর্ডার করুন",
             "regularPrice": 2970,
@@ -149,7 +149,7 @@
           "title": "লিমিটেড টাইম অফার টাইমার",
           "content": {
             "title": "অফারটি শেষ হতে আর বাকি মাত্র",
-            "targetDate": "2026-11-14T20:11:30.291Z",
+            "targetDate": "2026-11-23T13:50:14.717Z",
             "regularPrice": 2970,
             "offerPrice": 1799,
             "buttonText": "🛒 এখনই অর্ডার করুন"
@@ -164,8 +164,8 @@
           "content": {
             "title": "Lipoma Removal Spray কীভাবে কাজ করে ও ব্যবহারের নিয়ম দেখুন",
             "subtitle": "সহজ ব্যবহার পদ্ধতি ও কার্যকারিতার বাস্তব ভিডিও ডেমো",
-            "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-            "thumbnailUrl": "/images/lipoma-combo-3.png"
+            "videoUrl": "https://www.youtube.com/watch?v=4yNVXXcr2s0",
+            "thumbnailUrl": ""
           }
         },
         {
@@ -196,36 +196,12 @@
                 "description": "কোনো জটিলতা ছাড়াই ঘরে বসেই নিজে নিজে সহজে ব্যবহার করতে পারেন।"
               },
               {
-                "title": "Lipoma ও Fat Lump টার্গেট করে কাজ করে",
-                "description": "নিয়মিত ব্যবহারে লাম্পের উপরিভাগের টানটান অনুভূতি ও অস্বস্তি ধীরে ধীরে কমাতে সহায়তা করে।"
-              },
-              {
                 "title": "100% Herbal & Skin Friendly Formula",
                 "description": "প্রাকৃতিক উপাদানে তৈরি যা ত্বকের জন্য Gentle Care প্রদান করে এবং কোনো জ্বালাপোড়া করে না।"
               },
               {
-                "title": "দ্রুত শোষিত হয় (Fast Absorption)",
-                "description": "কোনো প্রকার Sticky বা আঠালো ভাব ছাড়াই কয়েক মুহূর্তেই স্কিনে সম্পূর্ণ Absorb হয়ে যায়।"
-              },
-              {
-                "title": "দৈনন্দিন ব্যবহারে নিরাপদ",
-                "description": "প্রতিদিন নিয়মিত ব্যবহারের জন্য প্রস্তুতকৃত একটি Safe & Effective ভেষজ কেয়ার ফর্মুলা।"
-              },
-              {
                 "title": "শরীরের বিভিন্ন স্থানে ব্যবহারযোগ্য",
                 "description": "ঘাড়, পিঠ, পেট, হাত কিংবা পায়ের যেকোনো ফ্যাট লাম্পের জায়গায় নির্বিঘ্নে ব্যবহার করা যায়।"
-              },
-              {
-                "title": "ব্যবহার করা অত্যন্ত সহজ",
-                "description": "শুধু প্রয়োজন মতো Spray করুন এবং আলতো করে কিছুক্ষণ Massage করুন।"
-              },
-              {
-                "title": "অস্বস্তিদায়ক ফিলিং থেকে স্বস্তি দেয়",
-                "description": "Unwanted Lump এর কারণে সৃষ্ট ভারি ভাব ও অস্বস্তি কমাতে সহায়তা করে।"
-              },
-              {
-                "title": "No Harsh Chemicals",
-                "description": "কোনো ক্ষতিকর কেমিক্যাল বা প্যারাবেন ছাড়া শতভাগ Natural Care Solution!"
               },
               {
                 "title": "Home Delivery + Cash On Delivery",
@@ -330,9 +306,9 @@
           "isVisible": true,
           "title": "ফুটার",
           "content": {
-            "hotline": "01905-761214",
-            "email": "contact@nobonir.com",
-            "address": "Dhaka, Bangladesh",
+            "hotline": "01938-569959",
+            "email": "mostocart@gmail.com",
+            "address": "House-31, Road-2, 6th Floor, Block-C, Banasree, Rampura, Dhaka, 1219",
             "copyrightText": "© ২০২৬ Nobonir Online Shopping. All rights reserved.",
             "returnPolicyText": "পণ্য হাতে পেয়ে চেক করে নেওয়ার সুবিধা এবং ত্রুটিপূর্ণ পণ্যে সহজ রিটার্ন পলিসি।"
           }
@@ -340,10 +316,258 @@
       ],
       "_id": "lp_1794238481576_0ntww",
       "createdAt": "2026-11-09T15:34:41.576Z",
-      "updatedAt": "2026-11-09T20:11:30.300Z"
+      "updatedAt": "2026-11-18T13:50:14.720Z"
     }
   ],
   "orders": [
+    {
+      "orderId": "LIP-261118-4662",
+      "customerName": "sadiq",
+      "phone": "01996963222",
+      "fullAddress": "pakunda , nama para",
+      "district": "ঢাকা",
+      "upazila": "pakunda",
+      "deliveryZone": "inside_dhaka",
+      "deliveryCharge": 70,
+      "selectedPackage": {
+        "id": "pkg-1",
+        "title": "(১ পিস) Lipoma Removal Spray",
+        "bottles": 1,
+        "price": 689,
+        "regularPrice": 990,
+        "sku": "LIP-01"
+      },
+      "quantity": 1,
+      "subtotal": 689,
+      "grandTotal": 759,
+      "orderNotes": "",
+      "orderStatus": "Pending",
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "Pending",
+      "courierInfo": {
+        "provider": "Steadfast",
+        "consignmentId": "",
+        "trackingCode": "",
+        "status": "Not Dispatched",
+        "notes": ""
+      },
+      "landingPageSlug": "lipoma-removal-spray",
+      "timeline": [
+        {
+          "status": "Pending",
+          "note": "কাস্টমার কর্তৃক অর্ডার সফলভাবে প্লেস করা হয়েছে।",
+          "timestamp": "2026-11-18T16:39:11.859Z"
+        }
+      ],
+      "_id": "ord_1795019951859_jswhu",
+      "createdAt": "2026-11-18T16:39:11.859Z",
+      "updatedAt": "2026-11-18T16:39:11.859Z"
+    },
+    {
+      "orderId": "LIP-TEST-5511",
+      "customerName": "আব্দুল্লাহ আল মামুন",
+      "phone": "01712345678",
+      "fullAddress": "রোড #৭, সেক্টর #৩, উত্তরা, ঢাকা",
+      "district": "ঢাকা",
+      "upazila": "উত্তরা",
+      "deliveryZone": "inside_dhaka",
+      "deliveryCharge": 70,
+      "selectedPackage": {
+        "id": "pkg-3",
+        "title": "(৩ পিস) Combo 3 — Lipoma Removal Spray",
+        "bottles": 3,
+        "price": 1799,
+        "regularPrice": 2970,
+        "sku": "LIP-03"
+      },
+      "quantity": 1,
+      "subtotal": 1799,
+      "grandTotal": 1869,
+      "orderNotes": "সন্ধ্যার পর ডেলিভারি দেওয়ার অনুরোধ",
+      "orderStatus": "Cancelled",
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "Collected",
+      "courierInfo": {
+        "provider": "Steadfast",
+        "consignmentId": "CN-STE-225515",
+        "trackingCode": "TRK33263108",
+        "status": "In Transit",
+        "dispatchedAt": "2026-11-18T14:13:45.516Z"
+      },
+      "landingPageSlug": "lipoma-removal-spray",
+      "timeline": [
+        {
+          "status": "Pending",
+          "note": "অর্ডার সফলভাবে প্লেস করা হয়েছে (E2E Test)",
+          "timestamp": "2026-11-18T14:13:45.511Z"
+        },
+        {
+          "status": "Confirmed",
+          "note": "অ্যাডমিন ফোনে কথা বলে অর্ডার কনফার্ম করেছেন",
+          "timestamp": "2026-11-18T14:13:45.514Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "পার্সেল কুরিয়ারে হস্তান্তর করা হয়েছে। কনসাইনমেন্ট: CN-STE-225515",
+          "timestamp": "2026-11-18T14:13:45.516Z"
+        },
+        {
+          "status": "Delivered",
+          "note": "গ্রাহক পণ্য গ্রহণ করেছেন এবং ৳১৮৬৯ নগদ ক্যাশ পরিশোধ করেছেন",
+          "timestamp": "2026-11-18T14:13:45.517Z"
+        },
+        {
+          "status": "Cancelled",
+          "note": "অর্ডারটি বাতিল করা হয়েছে।",
+          "timestamp": "2026-11-18T15:40:32.066Z"
+        }
+      ],
+      "_id": "ord_1795011225511_xw04d",
+      "createdAt": "2026-11-18T14:13:45.511Z",
+      "updatedAt": "2026-11-18T15:40:32.066Z",
+      "courierInfo.status": "Delivered",
+      "courierInfo.deliveredAt": "2026-11-18T14:13:45.517Z"
+    },
+    {
+      "orderId": "LIP-TEST-8021",
+      "customerName": "আব্দুল্লাহ আল মামুন",
+      "phone": "01712345678",
+      "fullAddress": "রোড #৭, সেক্টর #৩, উত্তরা, ঢাকা",
+      "district": "ঢাকা",
+      "upazila": "উত্তরা",
+      "deliveryZone": "inside_dhaka",
+      "deliveryCharge": 70,
+      "selectedPackage": {
+        "id": "pkg-3",
+        "title": "(৩ পিস) Combo 3 — Lipoma Removal Spray",
+        "bottles": 3,
+        "price": 1799,
+        "regularPrice": 2970,
+        "sku": "LIP-03"
+      },
+      "quantity": 1,
+      "subtotal": 1799,
+      "grandTotal": 1869,
+      "orderNotes": "সন্ধ্যার পর ডেলিভারি দেওয়ার অনুরোধ",
+      "orderStatus": "Returned",
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "Collected",
+      "courierInfo": {
+        "provider": "Steadfast",
+        "consignmentId": "CN-STE-758025",
+        "trackingCode": "TRK45368108",
+        "status": "In Transit",
+        "dispatchedAt": "2026-11-18T08:15:58.025Z"
+      },
+      "landingPageSlug": "lipoma-removal-spray",
+      "timeline": [
+        {
+          "status": "Pending",
+          "note": "অর্ডার সফলভাবে প্লেস করা হয়েছে (E2E Test)",
+          "timestamp": "2026-11-18T08:15:58.021Z"
+        },
+        {
+          "status": "Confirmed",
+          "note": "অ্যাডমিন ফোনে কথা বলে অর্ডার কনফার্ম করেছেন",
+          "timestamp": "2026-11-18T08:15:58.023Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "পার্সেল কুরিয়ারে হস্তান্তর করা হয়েছে। কনসাইনমেন্ট: CN-STE-758025",
+          "timestamp": "2026-11-18T08:15:58.025Z"
+        },
+        {
+          "status": "Delivered",
+          "note": "গ্রাহক পণ্য গ্রহণ করেছেন এবং ৳১৮৬৯ নগদ ক্যাশ পরিশোধ করেছেন",
+          "timestamp": "2026-11-18T08:15:58.026Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.471Z"
+        },
+        {
+          "status": "Delivered",
+          "note": "কুরিয়ার আপডেট (Steadfast): Delivered [গ্রাহকের ঠিকানা]",
+          "timestamp": "2026-11-18T08:44:59.867Z"
+        },
+        {
+          "status": "Returned",
+          "note": "গ্রাহক পার্সেল গ্রহণ করেননি / রিটার্ন",
+          "timestamp": "2026-11-18T15:40:50.351Z"
+        }
+      ],
+      "_id": "ord_1794989758021_o4faz",
+      "createdAt": "2026-11-18T08:15:58.021Z",
+      "updatedAt": "2026-11-18T15:40:50.351Z",
+      "courierInfo.status": "Delivered",
+      "courierInfo.deliveredAt": "2026-11-18T08:44:59.867Z"
+    },
+    {
+      "orderId": "LIP-TEST-8267",
+      "customerName": "আব্দুল্লাহ আল মামুন",
+      "phone": "01712345678",
+      "fullAddress": "রোড #৭, সেক্টর #৩, উত্তরা, ঢাকা",
+      "district": "ঢাকা",
+      "upazila": "উত্তরা",
+      "deliveryZone": "inside_dhaka",
+      "deliveryCharge": 70,
+      "selectedPackage": {
+        "id": "pkg-3",
+        "title": "(৩ পিস) Combo 3 — Lipoma Removal Spray",
+        "bottles": 3,
+        "price": 1799,
+        "regularPrice": 2970,
+        "sku": "LIP-03"
+      },
+      "quantity": 1,
+      "subtotal": 1799,
+      "grandTotal": 1869,
+      "orderNotes": "সন্ধ্যার পর ডেলিভারি দেওয়ার অনুরোধ",
+      "orderStatus": "Shipped",
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "Collected",
+      "courierInfo": {
+        "provider": "Steadfast",
+        "consignmentId": "CN-STE-868270",
+        "trackingCode": "TRK92609336",
+        "status": "In Transit",
+        "dispatchedAt": "2026-11-18T08:01:08.271Z"
+      },
+      "landingPageSlug": "lipoma-removal-spray",
+      "timeline": [
+        {
+          "status": "Pending",
+          "note": "অর্ডার সফলভাবে প্লেস করা হয়েছে (E2E Test)",
+          "timestamp": "2026-11-18T08:01:08.267Z"
+        },
+        {
+          "status": "Confirmed",
+          "note": "অ্যাডমিন ফোনে কথা বলে অর্ডার কনফার্ম করেছেন",
+          "timestamp": "2026-11-18T08:01:08.269Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "পার্সেল কুরিয়ারে হস্তান্তর করা হয়েছে। কনসাইনমেন্ট: CN-STE-868270",
+          "timestamp": "2026-11-18T08:01:08.270Z"
+        },
+        {
+          "status": "Delivered",
+          "note": "গ্রাহক পণ্য গ্রহণ করেছেন এবং ৳১৮৬৯ নগদ ক্যাশ পরিশোধ করেছেন",
+          "timestamp": "2026-11-18T08:01:08.272Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.484Z"
+        }
+      ],
+      "_id": "ord_1794988868267_n50i3",
+      "createdAt": "2026-11-18T08:01:08.267Z",
+      "updatedAt": "2026-11-18T08:21:34.484Z",
+      "courierInfo.status": "Delivered",
+      "courierInfo.deliveredAt": "2026-11-18T08:01:08.272Z"
+    },
     {
       "orderId": "LIP-TEST-9863",
       "customerName": "আব্দুল্লাহ আল মামুন",
@@ -365,7 +589,7 @@
       "subtotal": 1799,
       "grandTotal": 1869,
       "orderNotes": "সন্ধ্যার পর ডেলিভারি দেওয়ার অনুরোধ",
-      "orderStatus": "Delivered",
+      "orderStatus": "Shipped",
       "paymentMethod": "Cash on Delivery",
       "paymentStatus": "Collected",
       "courierInfo": {
@@ -396,11 +620,16 @@
           "status": "Delivered",
           "note": "গ্রাহক পণ্য গ্রহণ করেছেন এবং ৳১৮৬৯ নগদ ক্যাশ পরিশোধ করেছেন",
           "timestamp": "2026-11-09T15:50:49.873Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.495Z"
         }
       ],
       "_id": "ord_1794239449864_nfnjg",
       "createdAt": "2026-11-09T15:50:49.864Z",
-      "updatedAt": "2026-11-09T15:50:49.873Z",
+      "updatedAt": "2026-11-18T08:21:34.495Z",
       "courierInfo.status": "Delivered",
       "courierInfo.deliveredAt": "2026-11-09T15:50:49.873Z"
     },
@@ -424,7 +653,7 @@
       "subtotal": 1799,
       "grandTotal": 1869,
       "orderNotes": "",
-      "orderStatus": "Pending",
+      "orderStatus": "Shipped",
       "paymentMethod": "Cash on Delivery",
       "paymentStatus": "Pending",
       "courierInfo": {
@@ -439,11 +668,16 @@
           "status": "Pending",
           "note": "নতুন অর্ডার প্লেস করা হয়েছে",
           "timestamp": "2026-11-09T15:34:41.568Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.505Z"
         }
       ],
       "_id": "ord_1794238481588_v75uf",
       "createdAt": "2026-11-09T15:34:41.588Z",
-      "updatedAt": "2026-11-09T15:34:41.588Z"
+      "updatedAt": "2026-11-18T08:21:34.505Z"
     },
     {
       "orderId": "LIP-261109-6632",
@@ -465,7 +699,7 @@
       "subtotal": 1299,
       "grandTotal": 1419,
       "orderNotes": "জরুরি ডেলিভারি প্রয়োজন।",
-      "orderStatus": "Confirmed",
+      "orderStatus": "Shipped",
       "paymentMethod": "Cash on Delivery",
       "paymentStatus": "Pending",
       "courierInfo": {
@@ -485,11 +719,16 @@
           "status": "Confirmed",
           "note": "Admin confirmed order",
           "timestamp": "2026-11-09T07:34:41.568Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.517Z"
         }
       ],
       "_id": "ord_1794238481586_3tzkl",
       "createdAt": "2026-11-09T15:34:41.586Z",
-      "updatedAt": "2026-11-09T15:34:41.586Z"
+      "updatedAt": "2026-11-18T08:21:34.517Z"
     },
     {
       "orderId": "LIP-261109-7741",
@@ -541,7 +780,7 @@
       ],
       "_id": "ord_1794238481584_lygsi",
       "createdAt": "2026-11-09T15:34:41.584Z",
-      "updatedAt": "2026-11-09T15:34:41.584Z"
+      "updatedAt": "2026-11-18T08:21:34.526Z"
     },
     {
       "orderId": "LIP-261109-8812",
@@ -563,7 +802,7 @@
       "subtotal": 1799,
       "grandTotal": 1869,
       "orderNotes": "অফিস টাইমে ডেলিভারি দিলে ভালো হয়।",
-      "orderStatus": "Delivered",
+      "orderStatus": "Shipped",
       "paymentMethod": "Cash on Delivery",
       "paymentStatus": "Collected",
       "courierInfo": {
@@ -594,11 +833,16 @@
           "status": "Delivered",
           "note": "Successfully delivered to customer",
           "timestamp": "2026-11-08T15:34:41.568Z"
+        },
+        {
+          "status": "Shipped",
+          "note": "বাল্ক স্ট্যাটাস পরিবর্তন",
+          "timestamp": "2026-11-18T08:21:34.538Z"
         }
       ],
       "_id": "ord_1794238481582_x3ik8",
       "createdAt": "2026-11-09T15:34:41.582Z",
-      "updatedAt": "2026-11-09T15:34:41.582Z"
+      "updatedAt": "2026-11-18T08:21:34.538Z"
     }
   ],
   "reviews": [
@@ -620,10 +864,9 @@
   "settings": {
     "storeName": "Nobonir Online Shop",
     "tagline": "Trusted Health & Wellness Products in Bangladesh",
-    "hotline": "01905-761214",
-    "whatsappNumber": "01905761214",
-    "email": "contact@nobonir.com",
-    "address": "House 24, Road 5, Dhanmondi, Dhaka 1205",
+    "hotline": "01938-569959",
+    "email": "mostocart@gmail.com",
+    "address": "House-31, Road-2, 6th Floor, Block-C, Banasree, Rampura, Dhaka, 1219",
     "deliveryInsideDhaka": 70,
     "deliveryOutsideDhaka": 120,
     "defaultCourier": "Steadfast"

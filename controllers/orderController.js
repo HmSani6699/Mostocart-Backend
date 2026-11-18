@@ -279,3 +279,59 @@ export const dispatchOrder = async (req, res) => {
   }
 };
 
+export const updateOrderDetails = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { customerName, phone, fullAddress, district, upazila, deliveryZone, deliveryCharge, orderNotes, orderStatus, paymentStatus, quantity, subtotal, grandTotal, selectedPackage } = req.body;
+
+    const order = await Order.findOne({ orderId: id }) || await Order.findById(id);
+    if (!order) {
+      return res.status(404).json({ success: false, message: "Order not found" });
+    }
+
+    const update = {};
+    if (customerName) update.customerName = customerName.trim();
+    if (phone) update.phone = phone.trim();
+    if (fullAddress) update.fullAddress = fullAddress.trim();
+    if (district) update.district = district.trim();
+    if (upazila !== undefined) update.upazila = upazila.trim();
+    if (deliveryZone) update.deliveryZone = deliveryZone;
+    if (deliveryCharge !== undefined) update.deliveryCharge = Number(deliveryCharge);
+    if (orderNotes !== undefined) update.orderNotes = orderNotes;
+    if (orderStatus) update.orderStatus = orderStatus;
+    if (paymentStatus) update.paymentStatus = paymentStatus;
+    if (quantity !== undefined) update.quantity = Number(quantity);
+    if (subtotal !== undefined) update.subtotal = Number(subtotal);
+    if (grandTotal !== undefined) update.grandTotal = Number(grandTotal);
+    if (selectedPackage) update.selectedPackage = selectedPackage;
+
+    const timeline = order.timeline || [];
+    timeline.push({
+      status: update.orderStatus || order.orderStatus,
+      note: "অর্ডারের বিবরণ অ্যাডমিন কর্তৃক পরিমার্জন করা হয়েছে।",
+      timestamp: new Date()
+    });
+    update.timeline = timeline;
+
+    const updated = await Order.findByIdAndUpdate(order._id, update, { new: true });
+    res.json({ success: true, data: updated, message: "অর্ডার সফলভাবে আপডেট হয়েছে!" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+export const deleteOrder = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const order = await Order.findOne({ orderId: id }) || await Order.findById(id);
+    if (!order) {
+      return res.status(404).json({ success: false, message: "Order not found" });
+    }
+
+    await Order.findByIdAndDelete(order._id);
+    res.json({ success: true, message: "অর্ডারটি সফলভাবে মুছে ফেলা হয়েছে।" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+

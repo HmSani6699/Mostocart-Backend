@@ -5,8 +5,9 @@ import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
-import { connectDB } from "./db/connection.js";
+import { connectDB, isMongoDBActive } from "./db/connection.js";
 import { runSeed } from "./seed.js";
+import { isCloudinaryConfigured } from "./utils/cloudinary.js";
 
 // Routes
 import productRoutes from "./routes/productRoutes.js";
@@ -57,6 +58,8 @@ app.get("/health", (req, res) => {
   res.json({
     status: "ok",
     app: "Lipoma Removal Spray E-Commerce API",
+    database: isMongoDBActive() ? "MongoDB (Active)" : "Local Fallback",
+    cloudinary: isCloudinaryConfigured() ? "Cloudinary (Active)" : "Local Fallback",
     time: new Date().toISOString()
   });
 });
