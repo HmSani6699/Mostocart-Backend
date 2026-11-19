@@ -26,9 +26,9 @@ export async function runSeed() {
     isActive: true,
     mainImage: "/images/lipoma-combo-3.png",
     galleryImages: [
-      "/images/lipoma-combo-3.png",
-      "/images/lipoma-2-bottles.png",
-      "/images/lipoma-1-bottle.png",
+      "/images/product3.jpeg",
+      "/images/product2.jpeg",
+      "/images/product1.jpeg",
       "/images/lipoma-bottles-only.png"
     ],
     packages: [
@@ -43,7 +43,7 @@ export async function runSeed() {
         sku: "LIP-01",
         stock: 50,
         badge: "৩০% ছাড়",
-        image: "/images/lipoma-1-bottle.png",
+        image: "/images/product1.jpeg",
         isFeatured: false
       },
       {
@@ -57,7 +57,7 @@ export async function runSeed() {
         sku: "LIP-02",
         stock: 55,
         badge: "৩৪% ছাড়",
-        image: "/images/lipoma-2-bottles.png",
+        image: "/images/product2.jpeg",
         isFeatured: false
       },
       {
@@ -71,7 +71,7 @@ export async function runSeed() {
         sku: "LIP-03",
         stock: 45,
         badge: "৩৯% সেরা ছাড়",
-        image: "/images/lipoma-combo-3.png",
+        image: "/images/product3.jpeg",
         isFeatured: true
       }
     ],
